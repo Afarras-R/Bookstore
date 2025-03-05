@@ -23,7 +23,7 @@ include '.includes/toast_notification.php';
                         <tr class="text-center">
                             <th width="50px">#</th>
                             <th>Nama</th>
-                            <th width="150px">Pilihan</th>
+                            <th width="150px">Pilih</th>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
