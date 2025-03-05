@@ -29,14 +29,14 @@ include '.includes/toast_notification.php';
                     <tbody class="table-border-bottom-0">
                         <?php
                         $index = 1;
-                        $query = "SELECT * FROM categories";
+                        $query = "SELECT * FROM buku";
                         $exec = mysqli_query($conn, $query);
                         while ($category = mysqli_fetch_assoc($exec)) :
                         ?>
                         <tr>
                             <!-- Menampilkan nomor, nama kategori, dan opsi -->
                             <td><?= $index++; ?></td>
-                            <td><?= $category['category_name']; ?></td>
+                            <td><?= $category['judulBuku']; ?></td>
                             <td>
                                 <!-- Dropdown untuk opsi Edit dan Delete -->
                                 <div class="dropdown">
@@ -46,17 +46,17 @@ include '.includes/toast_notification.php';
                                     </button>
                                     <div class="dropdown-menu">
                                         <a href="#" class="dropdown-item" data-bs-toggle="model" 
-                                        data-bs-target="#editCategory_<?= $category['category_id']; ?>">
+                                        data-bs-target="#editCategory_<?= $category['buku_id']; ?>">
                                             <i class="bx bx-edit-alt me-2"></i> Edit </a>
                                         <a href="#" class="dropdown-item" data-bs-toggle="model" 
-                                        data-bs-target="#deleteCategory_<?= $category['category_id']; ?>">
+                                        data-bs-target="#deleteCategory_<?= $category['buku_id']; ?>">
                                             <i class="bx bx-trash me-2"></i> Delete </a>
                                     </div>
                                 </div>
                             </td>
                         </tr>
                         <!-- Modal untuk Hapus Data Kategori -->
-                        <div class="modal fade" id="deleteCateory_<?= $category['category_id']; 
+                        <div class="modal fade" id="deleteCategory_<?= $category['buku_id']; 
                         ?>" tabindex="-1" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
