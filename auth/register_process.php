@@ -4,13 +4,12 @@ require_once("../config.php");
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $name = $_POST["name"];
-    $password = $_POST["password"];
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    $email = $_POST["email"];
+    $nama = $_POST["nama"];
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT); 
 
-    $sql = "INSERT INTO users (username, name, password)
-    VALUES ('$username', '$name', '$hashedPassword')";
+    $sql = "INSERT INTO pelanggan (nama, email)
+    VALUES ('$email', '$nama', '$hashedPassword')";
     if ($conn->query($sql) === TRUE) {
         // Simpan notifikasi ke dalam session
         $_SESSION['notification'] = [
