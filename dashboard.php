@@ -1,8 +1,8 @@
 <?php
-include (".includes/header.php");
+include ("./includes/header.php");
 $title = "Dashboard";
 // Menyertakan file untuk menampilkan notifikasi (jika ada)
-include '.includes/toast_notification.php';
+include './includes/toast_notification.php';
 ?>
 <div class="container-xxl flex-grow=1 container-p-y">
     <!-- Card untuk menampilkan tabel postingan -->
@@ -31,11 +31,11 @@ include '.includes/toast_notification.php';
                             <?php
                                 $index = 1; // Variabel untuk nomor urut
                                 /* Query untuk mengambil data dari tabel posts, users, dan categories */
-                                $query = "SELECT posts.*, users.name as user_name,
-                                categories.category_name FROM posts
-                                INNER JOIN users ON posts.user_id = users.user_id
-                                LEFT JOIN categories ON posts.category_id = categories.category_id
-                                WHERE posts.user_id = $userId";
+                                $query = "SELECT buku.*, pelanggan.nama as nama,
+                                pembelian.tanggal_pembelian FROM buku
+                                INNER JOIN pelanggan ON buku.pelanggan_id = buku.pelanggan_id
+                                LEFT JOIN pembelian ON buku.pembelian_id = pembelian.pembelian_id
+                                WHERE buku.pelanggan_id = $pelangganId";
                                 // Eksekusi query
                                 $exec = mysqli_query($conn, $query);
 

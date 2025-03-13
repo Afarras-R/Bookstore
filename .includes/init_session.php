@@ -1,8 +1,8 @@
-<?php 
+<?php
 session_start();
 
 $pelangganId = $_SESSION["pelanggan_id"];
-$name = $_SESSION["name"];
+$nama = $_SESSION["nama"];
 $email = $_SESSION["email"];
 // Ambil notifikasi jika ada, kemudian hapus dari sesi
 $notification = $_SESSION['notification'] ?? null;
