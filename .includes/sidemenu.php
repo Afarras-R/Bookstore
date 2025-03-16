@@ -2,7 +2,7 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
   <div class="app-brand demo">
     <a href="./dashboard.php" class="app-brand-link">
-      <span class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">IdeKreatif</span>
+      <span class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">Bookstore</span>
     </a>
     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
       <i class="bx bx-chevron-left bx-sm align-middle"></i>
@@ -18,17 +18,17 @@
       </a>
     </li>
     <!-- Forms & Tables -->
-    <li class="menu-header small text-uppercase"><span class="menu-header-text">Posts</span></li>
+    <li class="menu-header small text-uppercase"><span class="menu-header-text">Post</span></li>
     <!-- Forms -->
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-detail"></i>
-        <div data-i18n="Posts">Posts</div>
+        <div data-i18n="Posts">Daftar Buku</div>
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
           <a href="posts.php" class="menu-link">
-            <div data-i18n="Basic Inputs">Post Baru</div>
+            <div data-i18n="Basic Inputs">Buku</div>
           </a>
         </li>
         <li class="menu-item">

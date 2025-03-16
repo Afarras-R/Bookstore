@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'type' => 'success',
             'message' => 'Login berhasil! Selamat datang, ' . $user["nama"]
         ];
-        header("Location: dashboard.php");
+        header("Location: ../dashboard.php");
         exit();
     } else {
         $_SESSION['notification'] = [
