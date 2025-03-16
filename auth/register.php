@@ -12,15 +12,15 @@
     <!-- /Logo -->
     <form action="register_process.php" class="mb-3" method="POST">
       <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" class="form-control" name="username" placeholder="Masukkan Username" autofocus/>
+        <label for="email" class="form-label">Nama Pengguna/Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Masukkan email" autofocus/>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Nama</label>
-        <input type="text" class="form-control" name="name" placeholder="Masukkan Nama" />
+        <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama" />
       </div>
       <div class="mb-3 form-password-toggle">
-        <label class="form-label" for="password">Password</label>
+        <label class="form-label" for="password">Kata Sandi</label>
         <div class="input-group input-group-merge">
           <input type="password" class="form-control" name="password"
           placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" />
