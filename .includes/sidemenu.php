@@ -18,7 +18,7 @@
       </a>
     </li>
     <!-- Forms & Tables -->
-    <li class="menu-header small text-uppercase"><span class="menu-header-text">Posts</span></li>
+    <li class="menu-header small text-uppercase"><span class="menu-header-text">Daftar bukus</span></li>
     <!-- Forms -->
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">

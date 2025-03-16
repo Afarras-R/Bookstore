@@ -13,7 +13,7 @@ include '.includes/header.php';
                     <form method="POST" action="proses_post.php" enctype="multipart/form-data">
                         <!-- Input untuk judul postingan -->
                         <div class="mb-3">
-                            <label for="post_title" class="form-label">Judul Postingan</label>
+                            <label for="post_title" class="form-label">Judul Buku</label>
                             <input type="text" class="form-control" name="post-title" required>
                         </div>
                         <!-- Input untuk mengunggah Gambar -->
