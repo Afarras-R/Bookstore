@@ -1,41 +1,51 @@
 <?php
-session_start();
 require_once("../config.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+session_start();
 
-    $sql = "SELECT * FROM users WHERE username='$username'";
-    $result = $conn->query($sql);
-    
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        // Verifikasi password
-        if (password_verify($password, $row["password"])) {
-            $_SESSION["username"] = $username;
-            $_SESSION["name"] = $row["name"];
-            $_SESSION["role"] = $row["role"];
-            $_SESSION["user_id"] = $row["user_id"];
-            // Set notifikasi selamat datang
-            $_SESSION['notification'] = [
-                'type' => 'primary',
-                'message' => 'Selamat Datang Kembali!'
-            ];
-            // Redirect ke dashboard
-            header('Location: ../dashboard.php');
-            exit();
-        }   else {
-            // Password salah
-            $_SESSION['notification'] = [
-                'type' => 'danger',
-                'message' => 'Username atau Password salah'
-            ];   
-        }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = isset($_POST["email"]) ? trim($_POST["email"]) : null;
+    $password = isset($_POST["password"]) ? trim($_POST["password"]) : null;
+
+    // Validasi input tidak boleh kosong
+    if (empty($email) || empty($password)) {
+        $_SESSION['notification'] = [
+            'type' => 'danger',
+            'message' => 'Email dan password harus diisi!'
+        ];
+        header("Location: login.php");
+        exit();
     }
-    // Redirect kembali ke halaman login jika gagal
-    header('Location: login.php');
-    exit();
+
+    // Ambil data pengguna dari database berdasarkan email
+    $sql = "SELECT * FROM pelanggan WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
+
+    // Cek apakah pengguna ditemukan dan password sesuai
+    if ($user && password_verify($password, $user["password"])) {
+        $_SESSION["pelanggan_id"] = $user["pelanggan_id"];
+        $_SESSION["user_name"] = $user["nama"];
+        $_SESSION["notification"] = [
+            'type' => 'success',
+            'message' => 'Login berhasil! Selamat datang, ' . $user["nama"]
+        ];
+        header("Location: dashboard.php");
+        exit();
+    } else {
+        $_SESSION['notification'] = [
+            'type' => 'danger',
+            'message' => 'Email atau password salah!'
+        ];
+        header("Location: login.php");
+        exit();
+    }
 }
+
 $conn->close();
+?>
+onn->close();
 ?>
