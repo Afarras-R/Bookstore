@@ -21,13 +21,13 @@
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Post</span></li>
     <!-- Forms -->
     <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
+    <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-detail"></i>
-        <div data-i18n="Posts">Daftar Buku</div>
+        <div data-i18n="Posts">Daftar buku</div>
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
-          <a href="posts.php" class="menu-link">
+          <a href="books.php" class="menu-link">
             <div data-i18n="Basic Inputs">Buku</div>
           </a>
         </li>
