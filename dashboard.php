@@ -20,16 +20,16 @@ include '.includes/toast_notification.php';
                     <thead>
                         <tr class="text-center">
                             <th width="50px">#</th>
-                            <th>Judul Post</th>
+                            <th>Judul buku</th>
                             <th>Penulis</th>
-                            <th>Genre</th>
-                            <th width="150px">Pilihan</th>
+                            <th>Harga</th>
+                            <th width="150px">Sinopsis</th>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
                         <!-- Menampilkan data dari tabel database -->
                         <?php
-                                $index = 1; // Variabel untuk nomor urut
+                                $index = 1;
 
                                 /* Query untuk mengambil data dari tabel buku */
                                 $query = "SELECT buku.*, pelanggan.nama as pelanggan_nama 

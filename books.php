@@ -7,56 +7,49 @@ include '.includes/toast_notification.php';
 <div class="container-xxl flex-grow-1 container-p-y">
     <!-- Judul Halaman -->
     <div class="row">
-        <!-- Basic Layout -->
-        <div class="col-xxl">
-            <div class="card mb-4">
-                <div class="card-header d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">Tambahkan Buku</h5>
-                    <small class="text-muted float-end fw-bolder text-uppercase">Form Tambah Buku</small>
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-default-name">Judul Buku</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="basic-default-name" placeholder="John Doe" />
+        <div class="row">
+            <div class="col-xl">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Tambahkan Buku</h5>
+                        <small class="text-muted float-end">Form Tambah Buku</small>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label" for="basic-default-fullname">Penulis</label>
+                                <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" name="penulis" />
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-default-name">Penulis</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="basic-default-name" placeholder="Petualangan Mesir" />
+                            <div class="mb-3">
+                                <label class="form-label" for="basic-default-fullname">Judul Buku</label>
+                                <input type="text" class="form-control" id="basic-default-name" placeholder="Petualangan Azril" name="judulBuku" />
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-default-name">Genre</label>
-                            <div class="col-sm-10">
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="basic-default-name"
-                                    placeholder="Action, Adventure" />
+                            <div class="mb-3">
+                                <label class="form-label" for="basic-default-name">Harga</label>
+                                <div class="input-group input-group-merge">
+                                    <span class="input-group-text">Rp</span>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="100"
+                                        aria-label="Amount (in Rupiah)" 
+                                        name="harga"/>
+                                    <span class="input-group-text">.00</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-default-message">Deskripsi</label>
-                            <div class="col-sm-10">
+                            <div class="mb-3">
+                                <label class="form-label" for="basic-default-message">Sinopsis</label>
                                 <textarea
                                     id="basic-default-message"
                                     class="form-control"
-                                    placeholder="Tambahkan deskripsi buku"
-                                    aria-label="Tambahkan deskripsi buku"
-                                    aria-describedby="basic-icon-default-message2"></textarea>
+                                    placeholder="Tulis sipnosis buku!" 
+                                    name="sinopsis"></textarea>
                             </div>
-                        </div>
-                        <div class="row justify-content-end">
-                            <div class="col-sm-10">
-                                <button type="submit" class="btn rounded-pill btn-outline-info">Tambah</button>
-                            </div>
-                        </div>
-                    </form>
+                            <button type="submit" class="btn btn-primary">Tambah</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-       
-<?php include '.includes/footer.php'; ?>
+
+
+            <?php include '.includes/footer.php'; ?>
