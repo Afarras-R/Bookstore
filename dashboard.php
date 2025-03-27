@@ -29,7 +29,7 @@ include '.includes/toast_notification.php';
                     <tbody class="table-border-bottom-0">
                         <!-- Menampilkan data dari tabel database -->
                         <?php
-                                $index = 1; // Variabel untuk nomor urut
+                                $index = 1;
 
                                 /* Query untuk mengambil data dari tabel buku */
                                 $query = "SELECT buku.*, pelanggan.nama as pelanggan_nama 

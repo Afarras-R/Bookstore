@@ -36,7 +36,7 @@ navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
           <li>
             <a class="dropdown-item" href="auth/logout.php">
               <i class="bx bx-power-off me-2"></i>
-              <span class="align-middle">Log Out</span>
+              <span class="align-middle">Keluar</span>
             </a>
           </li>
         </ul>

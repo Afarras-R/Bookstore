@@ -45,7 +45,7 @@ include '.includes/toast_notification.php';
                                     placeholder="Tulis sipnosis buku!" 
                                     name="sinopsis"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send</button>
+                            <button type="submit" class="btn btn-primary">Tambah</button>
                         </form>
                     </div>
                 </div>
