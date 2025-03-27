@@ -85,8 +85,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update'])) {
     $content = $_POST['content'];
     $categoryId = $_POST['category_id'];
     $imageDir = "assets/img/uploads/"; // Direktori penyimpanan gambar
-
-    
 }
 
+// Periksa apakah file gambar baru diunggah 
+if (!empty($_FILES["image_path"]["name"])) { 
+    $imageName = $_FILES["image_path"]["name"]; 
+    $imagePath = $imageDir. $imageName;  
+    
+    // Pindahkan file baru ke direktori tujuan 
+    move_uploaded_file($_FILES["image_path"]["tmp_name"], $imagePath);   
+    
+    // Hapus gambar lama 
+    $queryOldImage = "SELECT image_path FROM posts WHERE id_post = 
+    $postId"; 
+    $resultOldImage = $conn->query($queryOldImage);  
+    if ($result0ldImage->num_rows > 0) { 
+        $oldImage = $resultOldImage->fetch_assoc()['image_path']; 
+        if (file_exists($oldImage)) { 
+            unlink($oldImage); // Menghapus file lama
+        }  
+    }  
+} else { 
+    // Jika tidak ada file baru, gunakan gambar lama  
+    $imagePathQuery = "SELECT image_path FROM posts WHERE id_post =
+    $postId";
+    $result = $conn->query($imagePathQuery); 
+    $imagePath = ($result->num_rows > 0) ? $result->fetch_assoc() 
+    ['image_path']: null; 
+    }
 ?>
