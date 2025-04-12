@@ -25,6 +25,10 @@ include '.includes/toast_notification.php';
                                 <input type="text" class="form-control" id="basic-default-name" placeholder="Petualangan Azril" name="judulBuku" />
                             </div>
                             <div class="mb-3">
+                                <label for="formFile" class="form-label">Unggah Gambar</label>
+                                <input class="form-control" type="file" name="image" accept="image/*" />
+                            </div>
+                            <div class="mb-3">
                                 <label class="form-label" for="basic-default-name">Harga</label>
                                 <div class="input-group input-group-merge">
                                     <span class="input-group-text">Rp</span>
@@ -38,18 +42,17 @@ include '.includes/toast_notification.php';
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="basic-default-message">Sinopsis</label>
+                                <label class="form-label"  for="basic-default-message">Sinopsis</label>
                                 <textarea
                                     id="basic-default-message"
                                     class="form-control"
                                     placeholder="Tulis sipnosis buku!" 
                                     name="sinopsis"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Tambah</button>
+                            <button type="submit" name="tambah" class="btn btn-primary">Tambah</button>
                         </form>
                     </div>
                 </div>
             </div>
 
-
-            <?php include '.includes/footer.php'; ?>
+ <?php include '.includes/footer.php'; ?>
