@@ -14,7 +14,7 @@
     <li class="menu-item">
       <a href="dashboard.php" class="menu-link">
         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-        <div data-i18n="Analytics">Dashboard</div>
+        <div data-i18n="Analytics" >Dashboard</div>
       </a>
     </li>
     <!-- Forms & Tables -->
@@ -33,7 +33,7 @@
         </li>
         <li class="menu-item">
           <a href="kategori.php" class="menu-link">
-            <div data-i18n="Input groups">Kategori</div>
+            <div data-i18n="Input groups">Riwayat Pembelian</div>
           </a>
         </li>
       </ul>
