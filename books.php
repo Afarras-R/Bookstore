@@ -15,7 +15,7 @@ include '.includes/toast_notification.php';
                         <small class="text-muted float-end">Form Tambah Buku</small>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="proses_book.php" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label class="form-label" for="basic-default-fullname">Penulis</label>
                                 <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" name="penulis" />
@@ -26,7 +26,7 @@ include '.includes/toast_notification.php';
                             </div>
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Unggah Gambar</label>
-                                <input class="form-control" type="file" name="image" accept="image/*" />
+                                <input class="form-control" type="file" name="gambar" accept="image/*" />
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="basic-default-name">Harga</label>
