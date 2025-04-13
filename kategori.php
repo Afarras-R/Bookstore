@@ -9,11 +9,7 @@ include '.includes/toast_notification.php';
     <!-- Table data kategori -->
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h4>Data Kategori</h4>
-            <!-- Tombol untuk menambah kategori baru -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCategory">
-            Tambah Kategori
-            </button>
+            <h4>Riwayat Pembelian Buku</h4>
         </div>
 
         <div class="card-body">
@@ -22,8 +18,9 @@ include '.includes/toast_notification.php';
                     <thead>
                         <tr class="text-center">
                             <th width="50px">#</th>
-                            <th>Nama</th>
-                            <th width="150px">Pilih</th>
+                            <th>Judul</th>
+                            <th width="150px"></th>
+                            <th width="150px">Tanggal</th>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
