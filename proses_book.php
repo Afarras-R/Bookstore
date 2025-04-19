@@ -29,3 +29,40 @@ if (isset($_POST['tambah'])) {
     echo "Form belum disubmit.";
 }
 ?>
+
+<?php
+include 'config.php';
+
+if (isset($_POST['update'])) {
+    $id = $_POST['id'];
+    $penulis = $_POST['penulis'];
+    $judul = $_POST['judulBuku'];
+    $harga = $_POST['harga'];
+    $sinopsis = $_POST['sinopsis'];
+
+    // Cek apakah gambar baru diunggah
+    if (!empty($_FILES['image']['name'])) {
+        $gambar = $_FILES['image']['name'];
+        $tmp = $_FILES['image']['tmp_name'];
+        $path = "assets/img/uploads/" . $gambar;
+        move_uploaded_file($tmp, $path);
+
+        // Update dengan gambar baru
+        $query = "UPDATE buku SET penulis='$penulis', judulBuku='$judul', harga='$harga', sinopsis='$sinopsis', gambar='$gambar' WHERE buku_id=$id";
+    } else {
+        // Update tanpa ganti gambar
+        $query = "UPDATE buku SET penulis='$penulis', judulBuku='$judul', harga='$harga', sinopsis='$sinopsis' WHERE buku_id=$id";
+    }
+
+    $result = mysqli_query($conn, $query);
+
+    if ($result) {
+        header("Location: dashboard.php?pesan=update-sukses");
+    } else {
+        echo "Gagal mengupdate data.";
+    }
+} else {
+    echo "Akses tidak sah.";
+}
+?>
+

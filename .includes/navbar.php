@@ -26,8 +26,22 @@ navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
                 </div>
                 <div class="flex-grow-1">
                   <span class="fw-semibold d-block"><?php echo $nama; ?></span>
+                  <span class="fw-semibold d-block"><?php echo $email; ?></span>
                 </div>
               </div>
+            </a>
+          </li>
+          <li>
+            <div class="dropdown-divider"></div>
+          </li>
+          <li>
+            <a class="dropdown-item" href=".php">
+              <i class="bx bx-buildings me-2"></i>
+              <span class="align-middle">Admin</span>
+            </a>
+            <a class="dropdown-item" href=".php">
+              <i class="bx bx-user me-2"></i>
+              <span class="align-middle">Pelanggan</span>
             </a>
           </li>
           <li>

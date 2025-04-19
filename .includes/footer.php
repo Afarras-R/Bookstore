@@ -10,7 +10,7 @@
                   All rights reserved.
                 </div>
                 <div>
-                  <a href="#" target="_blank" class="footer-link me-4">TIM RPL SMKN 4 Tanjungpinang</a>
+                  <a href="#" target="_blank" class="footer-link me-4">TIM BOOKSTORE XI RPL 1</a>
                 </div>
               </div>
             </footer>
