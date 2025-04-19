@@ -15,7 +15,11 @@ include '.includes/toast_notification.php';
         ?>
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img class="card-img-top" src="assets/img/uploads/<?php echo $buku['gambar']; ?>" alt="Gambar Buku" />
+                    <img class="card-img-top"
+                        src="assets/img/uploads/<?php echo $buku['gambar']; ?>"
+                        alt="Gambar Buku"
+                        style="height: 200px; width: 100%; object-fit: contain; background-color: #f5f5f5; padding: 5px;"/>
+                    
                     <div class="card-body">
                         <h5 class="card-title"><?php echo htmlspecialchars($buku['judulBuku']); ?></h5>
                         <p class="card-text"><?php echo htmlspecialchars($buku['sinopsis']); ?></p>
