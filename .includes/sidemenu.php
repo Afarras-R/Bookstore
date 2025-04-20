@@ -32,7 +32,7 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="kategori.php" class="menu-link">
+          <a href="riwayat_pembelian.php" class="menu-link">
             <div data-i18n="Input groups">Riwayat Pembelian</div>
           </a>
         </li>
