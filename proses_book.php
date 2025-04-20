@@ -3,7 +3,7 @@ include 'config.php'; // koneksi ke database
 
 if (isset($_POST['tambah'])) {
     $penulis  = $_POST['penulis'];
-    $judulbuku    = $_POST['judulBuku'];
+    $judul    = $_POST['judulBuku'];
     $harga    = $_POST['harga'];
     $sinopsis = $_POST['sinopsis'];
 
@@ -14,7 +14,7 @@ if (isset($_POST['tambah'])) {
 
     if (move_uploaded_file($tmp, $folder)) {
         $sql = "INSERT INTO buku (penulis, judulBuku, harga, sinopsis, gambar) 
-                VALUES ('$penulis', '$judulBuku', '$harga', '$sinopsis', '$gambar')";
+                VALUES ('$penulis', '$judul', '$harga', '$sinopsis', '$gambar')";
 
         if (mysqli_query($conn, $sql)) {
             header("Location: dashboard.php?status=success");
