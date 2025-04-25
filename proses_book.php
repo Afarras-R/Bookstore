@@ -30,6 +30,8 @@ if (isset($_POST['tambah'])) {
 }
 ?>
 
+
+// bagian edit
 <?php
 include 'config.php';
 
