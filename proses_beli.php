@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if (isset($_POST['bayar'])) {
     $judul = $_POST['judulBuku'];
@@ -26,8 +27,7 @@ if (isset($_POST['bayar'])) {
         'tanggal' => date('Y-m-d H:i:s'),
         'harga' => $harga,
         'uang' => $uang,
-        'kembalian' => $kembalian,
-        'gambar' => $gambar,
+        'kembalian' => $kembalian
     ];
 
     echo "<script>alert('Pembelian berhasil! Kembalian Anda: Rp {$kembalian}'); window.location.href = 'riwayat_pembelian.php';</script>";
