@@ -35,11 +35,11 @@ navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
             <div class="dropdown-divider"></div>
           </li>
           <li>
-            <a class="dropdown-item" href=".php">
+            <a class="dropdown-item" href="dashboard.php">
               <i class="bx bx-buildings me-2"></i>
               <span class="align-middle">Admin</span>
             </a>
-            <a class="dropdown-item" href=".php">
+            <a class="dropdown-item" href="dashboard_user.php">
               <i class="bx bx-user me-2"></i>
               <span class="align-middle">Pelanggan</span>
             </a>

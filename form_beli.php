@@ -11,7 +11,7 @@ if (!$buku) {
 }
 ?>
 
-<title>form beli buku</title>
+<title>Form Beli Buku</title>
 <div class="container-xxl flex-grow-1 container-p-y">
     <!-- Judul Halaman -->
     <div class="row">
@@ -19,11 +19,11 @@ if (!$buku) {
             <div class="col-xl">
                 <div class="card mb-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Pembelian Puku</h5>
+                        <h5 class="mb-0">Pembelian Buku</h5>
                         <small class="text-muted float-end">Form Pembelian Buku</small>
                     </div>
                     <div class="card-body">
-                          <form action="proses_beli.php" method="POST">
+                        <form action="proses_beli.php" method="POST">
                             <input type="hidden" name="buku_id" value="<?= $buku['buku_id'] ?>">
                             <input type="hidden" name="judulBuku" value="<?= htmlspecialchars($buku['judulBuku']) ?>">
                             <input type="hidden" name="harga" value="<?= $buku['harga'] ?>">
@@ -54,4 +54,4 @@ if (!$buku) {
                 </div>
             </div>
 
- <?php include '.includes/footer.php'; ?>
+<?php include '.includes/footer.php'; ?>

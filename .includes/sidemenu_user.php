@@ -12,27 +12,16 @@
   <ul class="menu-inner py-1">
     <!-- Dashboard -->
     <li class="menu-item">
-      <a href="dashboard.php" class="menu-link">
+      <a href="dashboard_user.php" class="menu-link">
         <i class="menu-icon tf-icons bx bx-home-circle"></i>
         <div data-i18n="Analytics" >Dashboard</div>
       </a>
     </li>
-    <!-- Forms & Tables -->
-    <li class="menu-header small text-uppercase"><span class="menu-header-text">Buku</span></li>
-    <!-- Forms -->
     <li class="menu-item">
-    <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-detail"></i>
-        <div data-i18n="Posts">Daftar buku</div>
+      <a href="riwayat_pembelian.php" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+        <div data-i18n="Analytics" >Riwayat Pembelian</div>
       </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="books.php" class="menu-link">
-            <div data-i18n="Basic Inputs">Tambah Buku</div>
-          </a>
-        </li>
-      </ul>
     </li>
-  </ul>
 </aside>
 <!-- / Menu -->

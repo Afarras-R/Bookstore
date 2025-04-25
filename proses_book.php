@@ -31,7 +31,7 @@ if (isset($_POST['tambah'])) {
 ?>
 
 
-// bagian edit
+// Bagian edit
 <?php
 include 'config.php';
 
@@ -67,4 +67,3 @@ if (isset($_POST['update'])) {
     echo "Akses tidak sah.";
 }
 ?>
-
