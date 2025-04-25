@@ -1,6 +1,6 @@
 <?php
 include("config.php");
-include(".includes/header.php");
+include(".includes/header_user.php");
 
 $title = "Dashboard"; 
 include('.includes/toast_notification.php');
@@ -32,17 +32,11 @@ include('.includes/toast_notification.php');
                         <li class="list-group-item"><strong>Penulis:</strong> <?php echo htmlspecialchars($buku['penulis']); ?></li>
                         <li class="list-group-item"><strong>Harga:</strong> Rp<?php echo number_format($buku['harga'], 0, ',', '.'); ?></li>
                     </ul>
-                    <br>
-                    <div class="dropdown position-absolute bottom-0 end-0 m-2">
-                        <button class="btn btn-sm btn-icon btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bx bx-dots-vertical-rounded"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="edit_book.php?id=<?php echo $buku['buku_id']; ?>">Edit Buku</a></li>
-                            <li><a class="dropdown-item text-danger" href="proses_hapus.php?id=<?php echo $buku['buku_id']; ?>"
-                                    onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">Hapus Buku</a></li>
-                        </ul>
+                    <div class="card-body">
+                        <!-- Tombol Beli -->
+                        <a href="form_beli.php?id=<?= $buku['buku_id'] ?>" class="btn btn-primary">Beli Sekarang</a>
                     </div>
+                    
                 </div>
             </div>
         <?php } ?>
