@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 'message' => 'Selamat Datang Kembali!'
             ];
             // Redirect ke dashboard
-            header('Location: ../dashboard.php');
+            header('Location: ../dashboard_user.php');
             exit();
         }   else {
             // Password salah
