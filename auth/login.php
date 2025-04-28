@@ -12,7 +12,7 @@
     <h4 class="mb-2">Selamat Datang di Bookstore!</h4>
     <form class="mb-3" action="login_auth.php" method="POST">
       <div class="mb-3">
-        <label class="form-label">Nama Pengguna/Email</label>
+        <label class="form-label">Masukan Email</label>
         <input type="text" class="form-control" name="email"
           placeholder="Masukan Nama/Email" autofocus required />
       </div>

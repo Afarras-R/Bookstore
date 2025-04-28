@@ -19,7 +19,7 @@ $kembalian = $uang - $harga;
 
 // Simpan ke tabel riwayat
 $query = "INSERT INTO riwayat (email, judulBuku, harga, uang, kembalian, tanggal)
-          VALUES ('$email', '$judul', '$harga', '$uang', '$kembalian', NOW())";
+            VALUES ('$email', '$judul', '$harga', '$uang', '$kembalian', NOW())";
 
 if (mysqli_query($conn, $query)) {
     echo "<script>alert('Pembelian berhasil!'); window.location='riwayat_pembelian.php';</script>";
