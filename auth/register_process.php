@@ -1,3 +1,6 @@
+<!-- Selesai -->
+
+<!-- Mr. Day Tohapok --> lihat sesion chat
 <?php
 require_once("../config.php");
 
@@ -21,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Hash password sebelum disimpan ke database
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     
-    // Gunakan tabel pelanggan sesuai database yang ada
+    // Query untuk menambahkan data pelanggan ke tabel
     $sql = "INSERT INTO pelanggan (email, nama, password) VALUES (?, ?, ?)";
     
-    // Prepare statement
+    // Prepare statement untuk mencegah SQL injection
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $email, $nama, $hashedPassword);
     
@@ -40,7 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ];
     }
     
+    // Menutup statement setelah eksekusi
     $stmt->close();
+    
+    // Redirect ke halaman login setelah registrasi selesai
     header("Location: login.php");
     exit();
 }
