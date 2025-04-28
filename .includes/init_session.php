@@ -9,6 +9,7 @@ $notification = $_SESSION['notification'] ?? null;
 if ($notification) {
     unset($_SESSION['notification']);
 }
+
 /* Periksa apakah sesi username dan role sudah ada,
 jika tidak maka arahkan ke halaman login */
 if (empty($_SESSION["nama"]) || empty($_SESSION["email"])) {

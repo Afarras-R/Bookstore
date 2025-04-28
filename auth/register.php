@@ -1,5 +1,5 @@
 <?php include(".layouts/header.php"); ?>
-<!-- Register Card -->
+<!-- Register Card --> 
 <div class="card">
   <div class="card-body">
     <!-- Logo -->
