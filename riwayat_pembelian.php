@@ -1,5 +1,3 @@
-<!-- Selesai -->
-
 <?php
 // Menyertakan header dan koneksi database
 include '.includes/header_user.php';

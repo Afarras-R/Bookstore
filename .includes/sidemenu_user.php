@@ -1,5 +1,3 @@
-<!--Selesai-->
-
 <!-- Menu Sidebar -->
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
   <!-- Brand Section -->

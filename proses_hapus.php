@@ -1,5 +1,3 @@
-<!-- Selesai -->
-
 <?php
 // Menghubungkan ke database
 include 'config.php';

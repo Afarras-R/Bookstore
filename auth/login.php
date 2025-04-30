@@ -1,5 +1,3 @@
-<!--Selesai-->
-
 <?php include(".layouts/header.php"); ?>
 <!-- Register Section -->
 <div class="card">
