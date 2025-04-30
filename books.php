@@ -1,5 +1,3 @@
-<!-- Selesai -->
-
 <?php
 // Menyertakan header halaman
 include '.includes/header.php';

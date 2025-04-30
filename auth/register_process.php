@@ -1,6 +1,3 @@
-<!-- Selesai -->
-
-<!-- Mr. Day Tohapok --> lihat sesion chat
 <?php
 require_once("../config.php");
 

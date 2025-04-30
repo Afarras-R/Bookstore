@@ -1,5 +1,3 @@
-<!-- Selesai -->
-
 <?php
 // Menyisipkan file konfigurasi database
 include 'config.php';

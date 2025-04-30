@@ -1,5 +1,3 @@
-<!-- Selesai -->
-
 <?php
 session_start(); // Memulai session
 include 'config.php'; // Menghubungkan ke database

@@ -1,5 +1,3 @@
-<!--Selesai-->
-
 <?php
 // Menentukan konfigurasi koneksi database
 $host = "localhost";      // Host database

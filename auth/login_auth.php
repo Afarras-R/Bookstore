@@ -1,5 +1,3 @@
-<!--Selesai-->
-
 <?php
 session_start(); // Memulai session PHP
 require_once("../config.php"); // Memasukkan file konfigurasi database
