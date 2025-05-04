@@ -36,7 +36,7 @@ $riwayat_query = mysqli_query($conn, "SELECT * FROM riwayat ORDER BY tanggal DES
                         <br>
                         <li class="list-group-item">
                             <!-- Tombol untuk menghapus riwayat pembelian -->
-                            <a class="btn btn-danger" href="proses_hapus.php?id=<?= $beli['id'] ?>" onclick="return confirm('Yakin ingin menghapus riwayat ini?')">Hapus</a>
+                            <a class="btn btn-danger" href="hapus_riwayat.php?id=<?= $beli['id'] ?>" onclick="return confirm('Yakin ingin menghapus riwayat ini?')">Hapus</a>
                         </li>
                     </div>
                 </div>
