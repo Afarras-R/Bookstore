@@ -23,7 +23,7 @@ include('.includes/toast_notification.php');
         while ($buku = mysqli_fetch_assoc($result)) {
         ?>
             <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card shadow-sm border-light rounded position-relative">
+                <div class="card shadow-sm border-light rounded position-r  elative">
                     <!-- Menampilkan gambar buku -->
                     <img class="card-img-top"
                         src="assets/img/uploads/<?php echo $buku['gambar']; ?>"
